@@ -1,16 +1,19 @@
 {
+  "homepage": "https://keshav-koli.github.io/Cuisine-Food",
   "name": "cuisinekart",
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
-    "test": "jest"
+    "test": "jest",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d dist"
   },
   "author": "keshav",
   "license": "ISC",
   "description": "this is a cuisinekart project",
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "parcel": "^2.13.3",
     "process": "^0.11.10"
   },
