@@ -1,0 +1,76 @@
+.shimer-container {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  justify-content: center;
+  gap: 20px;
+  margin-top: 80px;
+  margin-left: 75px;
+  padding: 20px;
+  display: grid;
+}
+
+.shimer {
+  background: linear-gradient(90deg, #c2c2c2 25%, #d6d6d6 50%, #c2c2c2 75%) 0 0 / 400% 100%;
+  border-radius: 10px;
+  width: 256px;
+  height: 384px;
+  animation: 1.5s infinite shimmer;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+.shimer-inner {
+  background-color: #d6d6d6;
+  border-radius: 5px;
+  height: 20px;
+  margin: 10px 0;
+  animation: 1.5s infinite shimmer;
+}
+
+.shimer-inner.large {
+  width: 80%;
+  height: 50%;
+  margin: 15px auto;
+}
+
+.shimer-inner.medium {
+  width: 60%;
+  height: 16px;
+  margin-left: 30px;
+}
+
+.shimer-inner.small {
+  width: 50px;
+  height: 12px;
+  margin-top: 15px;
+  margin-left: 30px;
+}
+
+.shimer-inner .extra-small {
+  width: 50px;
+  height: 12px;
+  margin-top: 15px;
+  margin-left: 150px;
+}
+
+.shimer-inner.semi-medium {
+  width: 50%;
+  height: 14px;
+  margin-top: 15px;
+  margin-left: 30px;
+}
+
+.shimer-inner.long-small {
+  width: 80%;
+  height: 12px;
+  margin-top: 15px;
+  margin-left: 30px;
+}
+/*# sourceMappingURL=index.3a01df49.css.map */
