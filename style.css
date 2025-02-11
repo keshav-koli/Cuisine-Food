@@ -1,0 +1,88 @@
+/* *========================Shimmer UI============================= */
+
+
+/* Shimmer container */
+.shimer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    /* margin: 20px; */
+    margin-top: 80px;
+    margin-left: 75px;
+  }
+  
+  /* Shimmer card */
+  .shimer {
+    width: 256px;
+    height: 384px;
+    border-radius: 10px;
+    background: linear-gradient(
+      90deg,
+      #c2c2c2 25%,
+      #d6d6d6 50%,
+      #c2c2c2 75%
+    );
+    background-size: 400% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+  
+  /* Animation for shimmer effect */
+  @keyframes shimmer {
+    0% {
+      background-position: 100% 0;
+    }
+    100% {
+      background-position: -100% 0;
+    }
+  }
+  
+  /* Optional - Add inner elements for a content preview */
+  .shimer-inner {
+    margin: 10px 0;
+    background-color: #d6d6d6;
+    height: 20px;
+    border-radius: 5px;
+    animation: shimmer 1.5s infinite;
+  }
+  
+  .shimer-inner.large {
+    height: 50%;
+    width: 80%;
+    margin: 15px auto;
+  }
+  
+  .shimer-inner.medium {
+    height: 16px;
+    width: 60%;
+    /* margin: 10px 0px; */
+    margin-left: 30px;
+  }
+  
+  .shimer-inner.small {
+    height: 12px;
+    width: 50px;
+    margin-left: 30px;
+    margin-top: 15px ;
+  }
+  .shimer-inner .extra-small {
+    height: 12px;
+    width: 50px;
+    margin-left: 150px;
+    margin-top: 15px ;
+  }
+  .shimer-inner.semi-medium {
+    height: 14px;
+    width: 50%;
+    /* margin: 10px 0px; */
+    margin-left: 30px;
+    margin-top: 15px;
+  }
+  .shimer-inner.long-small {
+    height: 12px;
+    width: 80%;
+    margin-top: 15px;
+    margin-left: 30px;
+    /* margin: 5px 5px; */
+  }
