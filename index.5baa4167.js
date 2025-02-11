@@ -2963,6 +2963,7 @@ var _contact = require("./src/components/Contact");
 var _contactDefault = parcelHelpers.interopDefault(_contact);
 var _error = require("./src/components/Error");
 var _errorDefault = parcelHelpers.interopDefault(_error);
+// import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 var _reactRouterDom = require("react-router-dom");
 // import { createBrowserRouter,RouterProvider } from "react-router";
 var _resturantMenu = require("./src/components/ResturantMenu");
@@ -2974,115 +2975,155 @@ var _resturantMenuDefault = parcelHelpers.interopDefault(_resturantMenu);
 // lazy loading
 // on demand loading
 // Dynamic import
-const Grocery = /*#__PURE__*/ (0, _react.lazy)(()=>require("2b205dc082606fa5"));
-_c = Grocery;
+const Grocery = /*#__PURE__*/ (0, _react.lazy)(_c = ()=>require("2b205dc082606fa5"));
+_c1 = Grocery;
 const AppLayout = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 28,
+                lineNumber: 29,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 29,
+                lineNumber: 30,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {}, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 30,
+                lineNumber: 31,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true);
 };
-_c1 = AppLayout;
-const appRouter = (0, _reactRouterDom.createBrowserRouter)([
-    {
-        path: "/",
-        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
-            fileName: "app.js",
-            lineNumber: 38,
-            columnNumber: 14
-        }, undefined),
-        children: [
-            {
+_c2 = AppLayout;
+const App = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.HashRouter), {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Routes), {
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
                 path: "/",
-                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
                     fileName: "app.js",
-                    lineNumber: 42,
-                    columnNumber: 18
-                }, undefined)
-            },
-            {
-                path: "/About",
-                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutDefault.default), {}, void 0, false, {
-                    fileName: "app.js",
-                    lineNumber: 46,
-                    columnNumber: 18
-                }, undefined)
-            },
-            {
-                path: "/Contact",
-                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactDefault.default), {}, void 0, false, {
-                    fileName: "app.js",
-                    lineNumber: 51,
-                    columnNumber: 18
-                }, undefined)
-            },
-            {
-                path: "/Grocery",
-                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _react.Suspense), {
-                    fallback: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                        children: "loading....."
+                    lineNumber: 40,
+                    columnNumber: 34
+                }, void 0),
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                        index: true,
+                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
+                            fileName: "app.js",
+                            lineNumber: 41,
+                            columnNumber: 33
+                        }, void 0)
                     }, void 0, false, {
                         fileName: "app.js",
-                        lineNumber: 56,
-                        columnNumber: 31
-                    }, void 0),
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Grocery, {}, void 0, false, {
+                        lineNumber: 41,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                        path: "about",
+                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutDefault.default), {}, void 0, false, {
+                            fileName: "app.js",
+                            lineNumber: 42,
+                            columnNumber: 40
+                        }, void 0)
+                    }, void 0, false, {
                         fileName: "app.js",
-                        lineNumber: 57,
-                        columnNumber: 13
+                        lineNumber: 42,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                        path: "contact",
+                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactDefault.default), {}, void 0, false, {
+                            fileName: "app.js",
+                            lineNumber: 43,
+                            columnNumber: 42
+                        }, void 0)
+                    }, void 0, false, {
+                        fileName: "app.js",
+                        lineNumber: 43,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                        path: "grocery",
+                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _react.Suspense), {
+                            fallback: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                children: "Loading..."
+                            }, void 0, false, {
+                                fileName: "app.js",
+                                lineNumber: 47,
+                                columnNumber: 35
+                            }, void 0),
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Grocery, {}, void 0, false, {
+                                fileName: "app.js",
+                                lineNumber: 48,
+                                columnNumber: 17
+                            }, void 0)
+                        }, void 0, false, {
+                            fileName: "app.js",
+                            lineNumber: 47,
+                            columnNumber: 15
+                        }, void 0)
+                    }, void 0, false, {
+                        fileName: "app.js",
+                        lineNumber: 44,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                        path: "resturantMenu/:resid",
+                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _resturantMenuDefault.default), {}, void 0, false, {
+                            fileName: "app.js",
+                            lineNumber: 52,
+                            columnNumber: 55
+                        }, void 0)
+                    }, void 0, false, {
+                        fileName: "app.js",
+                        lineNumber: 52,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                        path: "*",
+                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorDefault.default), {}, void 0, false, {
+                            fileName: "app.js",
+                            lineNumber: 53,
+                            columnNumber: 36
+                        }, void 0)
+                    }, void 0, false, {
+                        fileName: "app.js",
+                        lineNumber: 53,
+                        columnNumber: 11
                     }, undefined)
-                }, void 0, false, {
-                    fileName: "app.js",
-                    lineNumber: 56,
-                    columnNumber: 11
-                }, undefined)
-            },
-            // {
-            //   path: "/grocery",
-            //   element: <Grocery />,
-            // },
-            {
-                path: "/resturantMenu/:resid",
-                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _resturantMenuDefault.default), {}, void 0, false, {
-                    fileName: "app.js",
-                    lineNumber: 67,
-                    columnNumber: 18
-                }, undefined)
-            }
-        ],
-        errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorDefault.default), {}, void 0, false, {
+                ]
+            }, void 0, true, {
+                fileName: "app.js",
+                lineNumber: 40,
+                columnNumber: 9
+            }, undefined)
+        }, void 0, false, {
             fileName: "app.js",
-            lineNumber: 70,
-            columnNumber: 19
+            lineNumber: 39,
+            columnNumber: 7
         }, undefined)
-    }
-]);
+    }, void 0, false, {
+        fileName: "app.js",
+        lineNumber: 38,
+        columnNumber: 5
+    }, undefined);
+};
+_c3 = App;
 const root = (0, _clientDefault.default).createRoot(document.querySelector("#root"));
-root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterProvider), {
-    router: appRouter
-}, void 0, false, {
+root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(App, {}, void 0, false, {
     fileName: "app.js",
-    lineNumber: 75,
+    lineNumber: 61,
     columnNumber: 13
 }, undefined));
-var _c, _c1;
-$RefreshReg$(_c, "Grocery");
-$RefreshReg$(_c1, "AppLayout");
+var _c, _c1, _c2, _c3;
+$RefreshReg$(_c, "Grocery$lazy");
+$RefreshReg$(_c1, "Grocery");
+$RefreshReg$(_c2, "AppLayout");
+$RefreshReg$(_c3, "App");
 
   $parcel$ReactRefreshHelpers$6024.postlude(module);
 } finally {
