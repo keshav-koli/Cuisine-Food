@@ -1,9 +1,9 @@
-import fetch from "node-fetch";
+import axios from "axios";
 
 export async function handler(event) {
   try {
     const { restaurantId } = event.queryStringParameters;
-    
+
     if (!restaurantId) {
       return {
         statusCode: 400,
@@ -12,34 +12,28 @@ export async function handler(event) {
     }
 
     const API_URL = `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.6582349&lng=77.1432671&restaurantId=${restaurantId}`;
-    
-    const response = await fetch(API_URL, {
-      method: "GET",
+
+    const response = await axios.get(API_URL, {
       headers: {
         "Content-Type": "application/json",
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "Referer": "https://www.swiggy.com/", // Pretend to be from Swiggy
       },
+      timeout: 10000, // 10-second timeout
     });
-
-    if (!response.ok) {
-      throw new Error(`Swiggy API responded with status ${response.status}`);
-    }
-
-    const data = await response.json();
 
     return {
       statusCode: 200,
       headers: {
-        "Access-Control-Allow-Origin": "*", // Allow all domains
+        "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
-        "Access-Control-Allow-Headers": "Content-Type",
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify(response.data),
     };
   } catch (error) {
     return {
-      statusCode: 500,
+      statusCode: error.response?.status || 500,
       body: JSON.stringify({ error: error.message || "Failed to fetch menu data" }),
     };
   }
