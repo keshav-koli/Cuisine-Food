@@ -19,7 +19,7 @@ const About = () => {
 
 
   return (
-    <div className="about">
+    <div className="about  min-h-[520px]">
       <h1>About Us</h1>
       <h2>This is a about page</h2>
     </div>

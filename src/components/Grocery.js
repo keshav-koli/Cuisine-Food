@@ -1,6 +1,6 @@
 const Grocery=()=>{
     return(
-        <div className="grocery">
+        <div className="grocery min-h-[520px]">
         <h1>
             Hello this is a grocery store
         </h1>

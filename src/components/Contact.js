@@ -15,7 +15,7 @@ class Contact extends React.Component{
         console.log("parent render");
         return(
             
-            <div className="contact">
+            <div className="contact  min-h-[520px]">
             <h1>Contact Us</h1>
             <h2>+91 78451596324</h2>
             <UserClass  name={"keshav"} location={"newdelhi"}/>
