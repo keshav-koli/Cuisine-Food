@@ -8,5 +8,6 @@ export const menu_food_img_id =
 
 export const menu_food_api = "/.netlify/functions/fetchSwiggyData?restaurantId=";
 
+
 // EXPORT CONST NAVBAR_LOGO IS NAMED EXPORT
 // EXPORT DEFAULT FOOD_IMAGECDN IS DEFAULT EXPORT
