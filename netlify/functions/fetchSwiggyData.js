@@ -11,16 +11,15 @@ export async function handler(event) {
       };
     }
 
-    // Use a CORS Proxy to bypass Swiggy restrictions
-    const API_URL = `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.6582349&lng=77.1432671&restaurantId=${restaurantId}`;
+    const SWIGGY_API_URL = `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.6582349&lng=77.1432671&restaurantId=${restaurantId}`;
 
-    const CORS_PROXY = "https://corsproxy.io/?";
-    const response = await axios.get(CORS_PROXY + API_URL, {
+    const response = await axios.get(SWIGGY_API_URL, {
       headers: {
-        "Content-Type": "application/json",
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "Referer": "https://www.swiggy.com/",
+        "Accept": "application/json",
       },
-      timeout: 10000, // 10-second timeout
+      timeout: 15000, // 15 seconds timeout
     });
 
     return {
