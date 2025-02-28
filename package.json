@@ -6,8 +6,8 @@
     "start": "parcel index.html",
     "build": "parcel build index.html",
     "test": "jest",
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d dist"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "author": "keshav",
   "license": "ISC",
@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.0.6",
+    "node-fetch": "^3.3.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^6.14.0",
